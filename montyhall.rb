@@ -1,12 +1,10 @@
 #Monty Hall Simulator
 
-
 puts "How many times would you like to simulate the problem?"
 run = gets.chomp.to_i
 
 stay_correct = 0
 switch_correct = 0
-time = Time.now
 run.times do
   doors = ["goat","goat","goat"]
   car_door = Random.rand(3)
@@ -17,7 +15,6 @@ run.times do
   stay_correct += 1 if doors[choice] == 'car'
   switch_correct += 1 if doors[switch_door] == 'car'
 end
-puts Time.now - time
 
 stay_percent = (stay_correct.to_f / run) * 100
 switch_percent = (switch_correct.to_f / run) * 100
