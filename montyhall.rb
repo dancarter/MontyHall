@@ -7,9 +7,7 @@ run = gets.chomp.to_i
 stay_correct = 0
 switch_correct = 0
 run.times do
-  doors = ["goat","goat","goat"]
-  car_door = Random.rand(3)
-  doors[car_door] = 'car'
+  doors = ["goat","goat","car"].shuffle
   choice = Random.rand(3)
   show_door = 0
   switch_door = 0
